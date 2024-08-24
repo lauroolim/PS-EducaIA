@@ -1,5 +1,5 @@
 # PS-EducaIA
-![EducaIA-logo](https://github.com/user-attachments/assets/3ad80103-19b6-4161-ba38-d57311d3d632)
+![logo-EducaIA](https://github.com/user-attachments/assets/14095d0d-1ca0-42df-8082-c72520eb8cee)
 
 #### Link do quadro Trello:
 ```
