@@ -89,6 +89,7 @@ Este requisito tem como objetivo permitir que os usuarios se registrem no sistem
 
 [protótipo-Registrar Prof](https://github.com/user-attachments/assets/ca6ee354-368b-47cb-912b-529d39250300)
 [protótipo-Registrar Aluno](https://github.com/user-attachments/assets/ed60bce9-7c5b-4408-879f-372cb4b3ab9f)
+
 ---
 
 ### Realizar Login via web do EducaIA (Versão Professor)
@@ -102,7 +103,8 @@ Este requisito visa permitir que os usuários (professores, intrutores, afins) r
 **User Story:** Como professor, desejo realizar login no website EducaIA para acessar suas funcionalidades.  
 **Critério de aceitação:** Para fazer login no website, o usuário deve ter suas credenciais cadastradas no banco de dados do sistema EducaIA e inserir corretamente seu e-mail e senha. Após o login bem-sucedido, o usuário terá acesso às funcionalidades da plataforma, e assim, dar continuidade aos trabalhos.
 
-[protótipo-Login Professor](https://github.com/user-attachments/assets/5bd37606-1329-446a-a9e2-1f9216cfac88)
+[protótipo-Login Professor](https://github.com/user-attachments/assets/1ab9013e-d40d-453a-8444-c709bc3fc8dd)
+
 ---
 
 ### Realizar Login via app mobile do EducaIA (versão aluno)
@@ -117,7 +119,9 @@ Este requisito dá ao aluno acesso às funcionalidades do aplicativo. O usuário
 **Critério de aceitação:** Para fazer login no aplicativo, o usuário deve ter suas credenciais cadastradas, pela escola, no banco de dados do sistema EducaIA e inserir corretamente seu e-mail e senha. Após o login bem-sucedido, o usuário terá acesso às funcionalidades da plataforma, e assim, dar continuidade aos trabalhos.
 
 [Protótipo-Login Aluno](https://github.com/user-attachments/assets/808a44d4-500b-4287-be07-669c5b968e75)
+
 ---
+
 ### Redefinição de senha
 
 #### Descrição:
@@ -129,7 +133,8 @@ Este requisito visa permitir que os usuários restaurem sua senha. Os usuários 
 **User Story:** Como usuário comum, desejo poder restaurar minha senha.  
 **Critério de aceitação:** O usuário deve poder solicitar a redefinição de senha fornecendo seu e-mail registrado. Após solicitar a redefinição, o usuário deve receber um e-mail com um link seguro para redefinir a senha. O usuário deve ser capaz de redefinir a senha com sucesso seguindo as instruções fornecidas.
 
-[Redefinir senha](https://github.com/user-attachments/assets/aee83ab6-0d84-459f-8f9c-28fbe4f9d939)
+[Redefinir senha](https://github.com/user-attachments/assets/a7118447-1046-477a-bf1e-843cb6f5e4c4)
+
 ---
 
 ### Tela Home (web)
@@ -144,6 +149,8 @@ Este requisito tem como objetivo apresentar informações principais sobre a pla
 **Critério de aceitação:** O possível usuário será apresentado ao projeto, além de ter a opção de usar o "Fale conosco" para tirar dúvidas sobre o sistema, ou até mesmo solicitar implantação.
 
 [Home](https://github.com/user-attachments/assets/b4835fe5-acf0-4871-97ea-02f2195bb084)
+
+---
 
 ## Tecnologias Utilizadas
 
