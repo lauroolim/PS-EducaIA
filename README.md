@@ -148,7 +148,7 @@ Este requisito tem como objetivo apresentar informações principais sobre a pla
 **User Story:** Como possível usuário do sistema, quero entender melhor suas funcionalidades 
 **Critério de aceitação:** O possível usuário será apresentado ao projeto, além de ter a opção de usar o "Fale conosco" para tirar dúvidas sobre o sistema, ou até mesmo solicitar implantação.
 
-[Home](https://github.com/user-attachments/assets/b4835fe5-acf0-4871-97ea-02f2195bb084)
+[Home](https://github.com/user-attachments/assets/dfe553dd-4c07-4c88-bd9f-b7e65ad429d2)
 
 ---
 
@@ -160,3 +160,43 @@ Este requisito tem como objetivo apresentar informações principais sobre a pla
 - LLM: Langchain;
 - Banco de dados: PostgreSQL e Pinecone;
 - ORM : Prisma ou Drizzle ORM
+
+## Modelo Arquitetural
+- NestJS:
+Função: Servirá como o backend da aplicação
+Responsabilidades: Gerenciará a lógica do chatbot, a comunicação com a API da OpenAI e a lógica de negócios geral. Fornecerá os endpoints para que o frontend e a aplicação mobile possam interagir com os dados.
+
+- Next.js (Frontend da Aplicação Web):
+Função: Servirá como o frontend para a aplicação web com SSR.
+Responsabilidades: Fornecerá a interface do usuário para interação com o sistema, permitindo que novas escolas se registrem, e que professores acessem suas áreas específicas. Será a plataforma onde os usuários podem visualizar funcionalidades, realizar login, e interagir com o sistema. O Next possuirá renderização no lado do servidor para melhorar o SEO e a performance web
+
+- Prisma:
+Função: ORM
+Responsabilidades: Será usado para armazenar e gerenciar dados persistentes, como históricos de chat e informações de usuários
+
+- PostegreSQL:
+Função: Banco de dados relacional.
+Responsabilidades: Armazenar dados estruturados dos usuários e outros dados persistentes. Servirá como a fonte primária de dados relacionais
+
+- Pinecone db:
+Função: Banco de dados de vetores.
+Responsabilidades: Armazenar e consultar embeddings gerados por IA
+
+- OpenAI API:
+Função: Fornecedora de capacidades de IA para geração de texto.
+Responsabilidades: Gerar respostas, interações para o chatbot e questionários, usando modelos avançados de LLMs da OpenAI
+
+- Expo para React Native (EducaIA mobile):
+Função: Aplicação frontend para dispositivos móveis.
+Responsabilidades: Fornecerá a interface do usuário para interação com a aplicação. A aplicação mobile se comunicará com o backend NestJS através de APIs REST. Integrará funcionalidades do chatbot, permitindo que os usuários interajam com a IA diretamente de seus dispositivos móveis.
+
+- Integração do React Native com o Backend:
+
+API Requests: O Expo se comunicará com o backend NestJS usando chamadas API RESTful. As requisições podem incluir ações como envio de mensagens para o chatbot, consulta de dados do usuario e gerenciamento de informações
+Autenticação e Autorização:
+
+Autenticação: Clerk gerenciará a autenticação e o controle de acesso. O Expo usará o Clerk SDK para autenticar, garantindo que as sessões de usuários sejam seguras e que o acesso a diferentes partes da aplicação seja controlado com RBAC e no respectivo tenant do usuário
+
+Gerenciamento de estado: Zustand para gerenciar estados da aplicação, incluindo dados do usuário e interações com o chatbot
+
+chatbot: O Expo enviará as mensagens do usuário para o backend, que processará essas mensagens e consultará a API da OpenAI para obter as respostas. O backend então retornará as respostas para o frontend para exibição ao usuário
