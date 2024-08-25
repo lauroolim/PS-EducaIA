@@ -2,11 +2,11 @@
 ![logo-EducaIA](https://github.com/user-attachments/assets/14095d0d-1ca0-42df-8082-c72520eb8cee)
 
 ## Sobre a Plataforma:
-Idéia em ser um tipo de assistente virtual pra professores, instrutores, empresas que fazem workshops, onde os professores alimentam o software com seus pdfs específicos de aulas e os alunos acessam e tiram dúvidas com a IA através do RAG que a gente irá implantar.
+O projeto será um gerenciador de aulas com suporte de IA, terá funcionalidades de assistente virtual pra alunos, professores, instrutores, workshops, etc. Será uma plataforma onde os professores alimentam o software com seus própios pdfs de planejamento de aulas, possibilitando aos alunos, acesso à um chatbot para tirar dúvidas com a IA, além de questões geradas automaticamente, com correção e feedback para o professor, além de exibição de painel com os melhores colocados com base no acerto das questões. Este projeto será feito com a LLM do GPT gerenciada por meio de RAG.
 
 **Curso:** Bacharelado em Ciência da Computação \
 **Professor:** Edeilson Milhomem da Silva\
-**Time**: Lauro, Lucas Carvalho, Joao Pedro Ribeiro, Almir Daniel Melo , Tharcio Santana. 
+**Time**: Lauro Oliveira, Lucas Carvalho, Joao Pedro Ribeiro, Almir Daniel Melo , Tharcio Santana. 
 
 #### Link do quadro Trello:
 ```
@@ -16,9 +16,11 @@ https://trello.com/b/gTDHTo7x/projeto-de-sistemas
 ```
 https://trello.com/invite/b/66b650041e11e8c02068dd8d/ATTIc42498380d63f706f19dd16a23afc4c299A3FF4E/projeto-de-sistemas
 ```
-
+##### Prototipação das telas
+```
+![Figma do projeto](https://www.figma.com/proto/GrYBJsNuQn8qAnw1dIb5nS/Untitled?node-id=59-166&t=GRDzN4wb3mP5bo2R-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=59%3A166)
+```
 #### The Twelve-Factor App:
-
 ```
 https://12factor.net/
 ```
@@ -37,30 +39,32 @@ https://12factor.net/
 - Especialistas em educação e Comunidades de compartilhamento de conhecimento.
 
 ##### Atividades Chave:
-- Auxilio em salas de aulas virtuais entre professor e aluno.
+- Auxilio virtual em salas de aula, melhor interação entre professor e aluno.
 - Criação de plataforma com integração a chatbot e IA para auxilio em aula.
 
 ##### Valor Oferecido:
 - Ambiente de aprendizado lúdico
-- Agilizar o aprendizado.
+- Estimular o aprendizado.
 - Reduzir a carga sobre os professores.
 - Facilitar o processo de tirar dúvidas.
 
 ##### Relacionamento com o Cliente:
-- Suporte interativo e amigável atraves canais como chamados e/ou chat.
+- Suporte interativo e amigável atraves de canais como e-mail e/ou chat.
 - Feedback e melhoria constante dos sistemas.
 
 ##### Segmento de Mercado:
-- Escolas e Universidades que necessitam de um recurso que possa auxiliar no dia a dia como o caso de IA via chat, e que ocorra de forma eficaz para professores, escolas e alunos.
+- Escolas e Universidades que necessitam de recursos extras que possam auxiliar no dia a dia, e que ocorra de forma eficaz para professores, escolas e alunos.
 
 ##### Recursos Chave:
-- Equipe de desenvolvimento em separadas areas do desenvolvimento (back, front, ...)
-- Plataforma online para acesso à educação,interação e auxilio de IA no dia a dia.
+- Plataforma online para acesso aos conteúdos das aulas.
+- interação e auxilio de IA no dia a dia.
+- Feedback específico de cada aula para os professores/tutores
 
 ##### Canais:
 - Site oficial, com todas as informações necessarias.
 - Redes sociais.
 - Plataforma oficial.
+- app mobile 
   
 ##### Estrutura de Custos:
 - Implantação, desenvolvimento e manuntenção da plataforma.
@@ -73,79 +77,80 @@ https://12factor.net/
 
 ## Definindo os requisitos funcionais do projeto
 
-### RF01 - Registrar usuario
+### Registrar usuário
 
 #### Descrição:
-Este requisito tem como objetivo permitir que os usuarios se registrem no sistema do EducaIA. Os usuarios precisarão preencher os campos obrigatórios, que incluem email, nome, sobrenome e senha.
+Este requisito tem como objetivo permitir que os usuarios se registrem no sistema do EducaIA. Os usuarios precisarão preencher os campos obrigatórios, que incluem email, nome e senha.
 
 #### User Story:
-**Persona 01 - Consumidor**  
-**Epic:** Registrar usuario no Sistema.  
-**User Story:** Como usuario, desejo poder me cadastrar no sistema para acessar suas funcionalidades.  
-**Critério de aceitação:** O usuario deve ser capaz de preencher os campos obrigatórios (email, nome, sobrenome e senha) e clicar no botão "Registrar". O sistema deve verificar se o email fornecido já está em uso e, se não estiver, registrar o usuario no sistema com sucesso, permitindo que ele faça login posteriormente.
+**Persona 01 - Escola**  
+**Função:** Registrar usuario no Sistema via RBAC.  
+**User Story:** Como escola eu quero cadastrar os professores e alunos da instituição para que acessem as funcionalidades do sistema.  
+**Critério de aceitação:** O usuario deve ser capaz de preencher os campos obrigatórios (email, nome e senha) e clicar no botão "Login". O sistema deve verificar se o email fornecido foi cadastrado pela escola, se não, será barrada sua entrada no sistema.
 
-### RF02 - Realizar Login via web do EducaIA (Versão Professor)
-
-#### Descrição:
-Este requisito visa permitir que os usuários (professores, intrutores, afins) realizem login na plataforma do "EducaIA" para acessar suas funcionalidades, e assim inserir seus materiais e alimentar a Assistente Virtual. Os usuarios poderão inserir suas credenciais de login (e-mail e senha) na página de login. Além disso, eles terão a opção de redirecionamento para a tela de cadastro ou para a tela de redefinição de senha, conforme necessário.
-
-#### User Story:
-**Persona 01 - Usuário comum**  
-**Epic:** Realizar autenticação no aplicativo / plataforma web do EducaIA.  
-**User Story:** Como usuário comum, desejo realizar login no aplicativo EducaIA para acessar suas funcionalidades.  
-**Critério de aceitação:** Para fazer login no aplicativo, o usuário deve ter suas credenciais cadastradas no banco de dados do "Achei Barato" e inserir corretamente seu e-mail e senha. Após o login bem-sucedido, o usuário terá acesso às funcionalidades da plataforma, e assim, dar continuidade aos trabalhos.
-
-## Protótipo
-![RF02_-_login](Login)
-
-
+![protótipo-Registrar Prof](https://github.com/user-attachments/assets/ca6ee354-368b-47cb-912b-529d39250300)
+![protótipo-Registrar Aluno](https://github.com/user-attachments/assets/ed60bce9-7c5b-4408-879f-372cb4b3ab9f)
 ---
 
-### RF03 - Redefinição de senha
+### Realizar Login via web do EducaIA (Versão Professor)
 
 #### Descrição:
-Este requisito visa permitir que os usuários restaurem sua senha no aplicativo "Achei Barato" caso a tenham esquecido. Os usuários terão a opção de solicitar a redefinição de senha, fornecendo seu e-mail registrado. Eles receberão um e-mail com um link seguro para redefinir sua senha.
+Este requisito visa permitir que os usuários (professores, intrutores, afins) realizem login na plataforma do "EducaIA" para acessar suas funcionalidades, e assim inserir seus materiais e alimentar a Assistente Virtual. Os usuarios professores poderão inserir suas credenciais de login (e-mail e senha) na página de login, que terão acesso ao clicar no botão "área do professor" na tela Home. Além disso, eles terão a opção de redirecionamento para a tela de redefinição de senha, conforme necessário.
 
 #### User Story:
-**Persona 01 - Usuário comum**  
-**Epic:** Restaurar senha no aplicativo EducaIA.  
-**User Story:** Como usuário comum, desejo poder restaurar minha senha caso a tenha esquecido.  
-**Critério de aceitação:** O usuário deve poder solicitar a redefinição de senha fornecendo seu e-mail registrado. Após solicitar a redefinição, o usuário deve receber um e-mail com um link seguro para redefinir a senha. O usuário deve ser capaz de redefinir a senha com sucesso seguindo as instruções fornecidas.
+**Persona 01 - Professor**  
+**Função:** Realizar autenticação na plataforma web do EducaIA.  
+**User Story:** Como professor, desejo realizar login no website EducaIA para acessar suas funcionalidades.  
+**Critério de aceitação:** Para fazer login no website, o usuário deve ter suas credenciais cadastradas no banco de dados do sistema EducaIA e inserir corretamente seu e-mail e senha. Após o login bem-sucedido, o usuário terá acesso às funcionalidades da plataforma, e assim, dar continuidade aos trabalhos.
 
+![protótipo-Login Professor](https://github.com/user-attachments/assets/5bd37606-1329-446a-a9e2-1f9216cfac88)
 ---
 
-### RF04 - Acessar Tela Principal
+### Realizar Login via app mobile do EducaIA (versão aluno)
 
 #### Descrição:
-Este requisito dá ao usuário acesso às principais funcionalidades do aplicativo. Na tela principal, ele poderá visualizar as funcionalides referentes a cada tipo de usuario, professor ou aluno. Para o usuario aluno, o aluno vai poder verificar as materias que ele está cadastrado no momento, além dos materias em cada materia. Já o professor, poderá inserir e gerenciar seus materias para alimentar a Assistente virtual, além da criação e gerenciamente de questionarios, provas, etc.
+Este requisito dá ao aluno acesso às funcionalidades do aplicativo. O usuário aluno poderá verificar as disciplinas curriculares que está cadastrado no momento, além dos conteúdos em cada disciplina. Já o professor, poderá inserir e gerenciar o centeúdo das disciplinas, no ambiente web, para alimentar a Assistente virtual, além da criação e gerenciamento de questionarios, provas, etc.
 
 #### User Story
-| Épico | User Story | Critério de Aceitação |
-|- | - | - |
-| Ações e Gerenciamento do Consumidor | Como usuário professor, gostaria de visualizar e acessar as materiais que tenho controle, e visualisar e gerenciar os documentos de aula, questionarios, provas e perguntas dessa(s) materia(as). Como usuário proaluno, gostaria de visualizar e acessar as materiais que estou cadastrado, e visualisar os materias de aula para estudo, e ter auxilio da Assistente Virtual para os estudos.  | O usuário professor e aluno deve estar registrado e autenticado no sistema para ter acesso à tela principal. |
+**Persona 01 - Aluno**  
+**Função:** Realizar autenticação na plataforma mobile do EducaIA.  
+**User Story:** Como aluno, desejo realizar login no aplicativo EducaIA para acessar suas funcionalidades.  
+**Critério de aceitação:** Para fazer login no aplicativo, o usuário deve ter suas credenciais cadastradas, pela escola, no banco de dados do sistema EducaIA e inserir corretamente seu e-mail e senha. Após o login bem-sucedido, o usuário terá acesso às funcionalidades da plataforma, e assim, dar continuidade aos trabalhos.
 
-## Protótipo
-![RF04_-_Home](Home)
+![Protótipo-Login Aluno](https://github.com/user-attachments/assets/808a44d4-500b-4287-be07-669c5b968e75)
+---
+### Redefinição de senha
+
+#### Descrição:
+Este requisito visa permitir que os usuários restaurem sua senha. Os usuários terão a opção de solicitar a redefinição de senha, fornecendo seu e-mail registrado. Eles receberão um e-mail com um link seguro para redefinir sua senha.
+
+#### User Story:
+**Persona 01 - Usuário comum**  
+**Função:** Restaurar senha no sistema EducaIA.  
+**User Story:** Como usuário comum, desejo poder restaurar minha senha.  
+**Critério de aceitação:** O usuário deve poder solicitar a redefinição de senha fornecendo seu e-mail registrado. Após solicitar a redefinição, o usuário deve receber um e-mail com um link seguro para redefinir a senha. O usuário deve ser capaz de redefinir a senha com sucesso seguindo as instruções fornecidas.
+
+![Redefinir senha](https://github.com/user-attachments/assets/aee83ab6-0d84-459f-8f9c-28fbe4f9d939)
 ---
 
-### RF05 - Tela principal de Inicio
+### Tela Home (web)
 
 #### Descrição
-Este requisito tem como objetivo exibir informações principais sobre a plataforma,as principais funcionalidades e a facilidade para professores e alunos, além de uma facil aprendizagem.
+Este requisito tem como objetivo apresentar informações principais sobre a plataforma,as principais funcionalidades e facilidades para professores e alunos, além de um "fale conosco" para maior detalhamento ou uma possível solicitação de implantação do nosso sistema.
 
-#### User Story - Visão do Usuário
-| Épico | User Story | Critério de Aceitação |
-|-|-|-|
-| Como usuário professor e/ou aluno, quero visualizar detalhes sobre como funciona a plataforma e como ela funciona, além do valor que ela pode trazer.Além de ter uma aba de contatos. | O usuário não necessariamente necessita estar registrado e autenticado no sistema, já que é uma tela inicial informativo.
+#### User Story:
+**Persona 01 - Possível usuário**  
+**Função:** Apresentar o produto  
+**User Story:** Como possível usuário do sistema, quero entender melhor suas funcionalidades 
+**Critério de aceitação:** O possível usuário será apresentado ao projeto, além de ter a opção de usar o "Fale conosco" para tirar dúvidas sobre o sistema, ou até mesmo solicitar implantação.
 
-## Protótipo
-![RF05_-_Produto](TelaInicial)
+![Home](https://github.com/user-attachments/assets/b4835fe5-acf0-4871-97ea-02f2195bb084)
 
 ## Tecnologias Utilizadas
 
 - Back e Front : Typescript ; 
-- FrameWork: Nest(Back) / Next(Front);
+- FrameWork: Nest(Back), Next(Front) e React Native;
 - Autenticação de Login: Clerk auth, ou Keycloack;
 - LLM: Langchain;
-- Banco de dados: PostgreSql e Pinecone;
+- Banco de dados: PostgreSQL e Pinecone;
 - ORM : Prisma ou Drizzle ORM
