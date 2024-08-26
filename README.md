@@ -2,7 +2,7 @@
 ![logo-EducaIA](https://github.com/user-attachments/assets/14095d0d-1ca0-42df-8082-c72520eb8cee)
 
 ## Sobre a Plataforma:
-O projeto será um gerenciador de aulas com suporte de IA, terá funcionalidades de assistente virtual pra alunos, professores, instrutores, workshops, etc. Será uma plataforma onde os professores alimentam o software com seus própios pdfs de planejamento de aulas, possibilitando aos alunos, acesso à um chatbot para tirar dúvidas com a IA, além de questões geradas automaticamente, com correção e feedback para o professor, além de exibição de painel com os melhores colocados com base no acerto das questões. Este projeto será feito com a LLM do GPT gerenciada por meio de RAG.
+O sistema EducaIA funciona como um gerenciador de aulas com suporte de IA que oferece funcionalidades de assistente virtual para alunos, professores, instrutores, workshops e demais interessados. É uma plataforma onde os professores alimentam o software com seus próprios conteúdos de planejamento de aula, possibilitando aos alunos o acesso a um chatbot para tirar dúvidas com a IA. Além disso, a plataforma oferece questões geradas automaticamente, com correção e feedback para o professor, e entre outras funcionalidades. Este projeto visa impulsionar o rendimento e a eficiência no processo de ensino-aprendizagem, proporcionando uma experiência personalizada e eficiente de ensino.
 
 **Curso:** Bacharelado em Ciência da Computação \
 **Professor:** Edeilson Milhomem da Silva\
